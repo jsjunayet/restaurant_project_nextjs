@@ -1,11 +1,17 @@
-import Image from 'next/image';
-import React from 'react';
+import Main from "@/components/Main";
+import Navbar from "@/components/Navbar";
+import Sidebar from "@/components/Sidebar";
 
-const HomePage = () => {
+
+
+export default function Home() {
   return (
-    <div className=' bg-red-600'>
+    <div className="flex h-screen bg-gray-100 dark:bg-dark-gray">
+      <Sidebar />
+      <div className="flex-1 flex flex-col">
+        <Navbar />
+        <Main />
+      </div>
     </div>
   );
-};
-
-export default HomePage;
+}
